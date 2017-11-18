@@ -1,3 +1,4 @@
+# encoding: utf-8
 import math, json, os, sys
 
 import keras

@@ -1,13 +1,7 @@
 import os
+import time
 
-TRAIN_DIR = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL"
-
-for r, d, files in os.walk(TRAIN_DIR):
-    print("r", r)
-    print()
-
-    print("d", d)
-    print()
-
-    print("files", files)
-    print()
+if __name__ == "__main__":
+    for i in range(100):
+        print(i)
+        time.sleep(5)
