@@ -4,8 +4,8 @@ import shutil
 train_root = 'data/sun_train'
 val_root = 'data/sun_val'
 
-train_txt = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/code/train.txt"
-val_txt = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/code/valid.txt"
+train_txt = "/home/sunqc/DR/data/train.txt"
+val_txt = "/home/sunqc/DR/data/valid.txt"
 
 
 if __name__ == "__main__":
