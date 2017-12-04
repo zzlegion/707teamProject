@@ -18,18 +18,18 @@ VALID_DIR = "../../data/sun_val"
 
 if __name__ == "__main__":
     # 训练数据
-    train_datagen = ImageDataGenerator(width_shift_range=0.05, height_shift_range=0.05, vertical_flip=True)
-    train_generator = train_datagen.flow_from_directory(TRAIN_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
-    image_numbers = train_generator.samples
-    print(train_generator.class_indices)
+    # train_datagen = ImageDataGenerator(width_shift_range=0.05, height_shift_range=0.05, vertical_flip=True)
+    # train_generator = train_datagen.flow_from_directory(TRAIN_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
+    # image_numbers = train_generator.samples
+    # print(train_generator.class_indices)
 
     # 生成测试数据
-    test_datagen = ImageDataGenerator()
-    validation_generator = test_datagen.flow_from_directory(VALID_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
+    # test_datagen = ImageDataGenerator()
+    # validation_generator = test_datagen.flow_from_directory(VALID_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
 
     # 使用VGG16的结构，不包括最后一层，且加载ImageNet的预训练参数
     base_model = VGG16(weights=None, include_top=False, pooling='max')
-    base_model.load_weights("vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5")
+    # base_model.load_weights("vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5")
 
     # 构建网络的最后一层，二分类
     predictions = Dense(1, activation='sigmoid')(base_model.output)
