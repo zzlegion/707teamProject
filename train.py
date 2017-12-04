@@ -17,8 +17,8 @@ from keras.layers import Dense, Dropout, Flatten
 batch_size = 64
 
 epochs = 100
-TRAIN_DIR = "data/sun_train"
-VALID_DIR = "data/sun_val"
+TRAIN_DIR = "data/train"
+VALID_DIR = "data/val"
 
 if __name__ == "__main__":
     train_datagen = ImageDataGenerator(width_shift_range=0.05, height_shift_range=0.05, vertical_flip=True)
@@ -50,4 +50,4 @@ if __name__ == "__main__":
     check_pointer = ModelCheckpoint('vgg16_best.h5', verbose=1, save_best_only=True)
     model.fit_generator(train_generator, steps_per_epoch=image_numbers // batch_size, epochs=epochs,
                         validation_data=validation_generator, validation_steps=batch_size,
-	                    callbacks=[early_stopping, check_pointer])
+                        callbacks=[early_stopping, check_pointer])
