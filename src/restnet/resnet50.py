@@ -44,7 +44,7 @@ if __name__ == "__main__":
         print("Successfully loaded resnet50_best.h5")
 
     # 编译模型
-    model.compile(optimizer=Adam(lr=0.0005), loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=Adam(lr=0.01), loss='binary_crossentropy', metrics=['accuracy'])
 
     # 训练模型
     csv_logger = CSVLogger('log.csv', append=True, separator=';')
