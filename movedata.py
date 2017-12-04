@@ -24,9 +24,9 @@ if __name__ == "__main__":
     for line in lines:
         path, label = line.strip().split(" ")
         if label == "0":
-            shutil.move(path, train_root+"/0/"+str(global_img_idx)+"_"+os.path.basename(path))
+            shutil.copy(path, train_root+"/0/"+str(global_img_idx)+"_"+os.path.basename(path))
         elif label == "1":
-            shutil.move(path, train_root + "/1/" + str(global_img_idx) + "_" + os.path.basename(path))
+            shutil.copy(path, train_root + "/1/" + str(global_img_idx) + "_" + os.path.basename(path))
         else:
             raise ValueError("label error, label="+label)
         global_img_idx += 1
@@ -37,9 +37,9 @@ if __name__ == "__main__":
     for line in lines:
         path, label = line.strip().split(" ")
         if label == "0":
-            shutil.move(path, val_root+"/0/"+str(global_img_idx)+"_"+os.path.basename(path))
+            shutil.copy(path, val_root+"/0/"+str(global_img_idx)+"_"+os.path.basename(path))
         elif label == "1":
-            shutil.move(path, val_root+"/1/"+str(global_img_idx)+"_"+os.path.basename(path))
+            shutil.copy(path, val_root+"/1/"+str(global_img_idx)+"_"+os.path.basename(path))
         else:
             raise ValueError("label error, label=" + label)
         global_img_idx += 1
