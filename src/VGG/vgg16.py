@@ -13,8 +13,8 @@ batch_size = 64
 # 训练的epoch
 epochs = 1000
 # 数据位置
-TRAIN_DIR = "../../data/train"
-VALID_DIR = "../../data/val"
+TRAIN_DIR = "../../data/sun_train'"
+VALID_DIR = "../../data/sun_val"
 
 if __name__ == "__main__":
     # 训练数据
