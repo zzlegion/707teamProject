@@ -17,8 +17,8 @@ from keras.layers import Dense, Dropout, Flatten
 batch_size = 64
 
 epochs = 100
-TRAIN_DIR = "/home/long/Desktop/project/data/train"
-VALID_DIR = "/home/long/Desktop/project/data/val"
+TRAIN_DIR = "/home/liujw/dl707/data/train"
+VALID_DIR = "/home/liujw/dl707/data/val"
 
 if __name__ == "__main__":
     train_datagen = ImageDataGenerator(width_shift_range=0.05, height_shift_range=0.05, vertical_flip=True)
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     test_datagen = ImageDataGenerator()
     validation_generator = test_datagen.flow_from_directory(VALID_DIR, target_size=(200, 200), batch_size=batch_size, class_mode="binary")
 
-    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(3, 200,200))
+    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(200,200,3))
 
     for layer in base_model.layers[:5]:
         layer.trainable = False
