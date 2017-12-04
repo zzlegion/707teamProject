@@ -14,7 +14,7 @@ batch_size = 64
 epochs = 1000
 # 数据位置
 TRAIN_DIR = "../../data/train"
-VALID_DIR = "../../data//val"
+VALID_DIR = "../../data/val"
 
 if __name__ == "__main__":
     # 训练数据
