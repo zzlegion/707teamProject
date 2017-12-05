@@ -17,18 +17,18 @@ from keras.layers import Dense, Dropout, Flatten
 batch_size = 64
 
 epochs = 100
-TRAIN_DIR = "data_old/sun_train"
-VALID_DIR = "data_old/sun_val"
+TRAIN_DIR = "data/train"
+VALID_DIR = "data/val"
 
 if __name__ == "__main__":
     train_datagen = ImageDataGenerator(width_shift_range=0.05, height_shift_range=0.05, vertical_flip=True)
-    train_generator = train_datagen.flow_from_directory(TRAIN_DIR, target_size=(200, 200), batch_size=batch_size, class_mode="binary")
+    train_generator = train_datagen.flow_from_directory(TRAIN_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
     image_numbers = train_generator.samples
 
     test_datagen = ImageDataGenerator()
-    validation_generator = test_datagen.flow_from_directory(VALID_DIR, target_size=(200, 200), batch_size=batch_size, class_mode="binary")
+    validation_generator = test_datagen.flow_from_directory(VALID_DIR, target_size=(224, 224), batch_size=batch_size, class_mode="binary")
 
-    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(200, 200, 3))
+    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
     # for layer in base_model.layers[:5]:
     #     layer.trainable = False
