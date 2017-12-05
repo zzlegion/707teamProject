@@ -4,8 +4,8 @@ import shutil
 import numpy as np
 
 # image source
-POSITIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/positive_200"
-NEGATIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/negative_200"
+POSITIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/positive"
+NEGATIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/negative"
 # train and validation root
 TRAIN_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/train"
 VAL_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/val"
