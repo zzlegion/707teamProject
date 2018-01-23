@@ -11,7 +11,7 @@ import os
 # 训练的batch_size
 batch_size = 64
 # 训练的epoch
-epochs = 1000
+epochs = 200
 # 数据位置
 
 TRAIN_DIR = "../../data/train"
@@ -33,7 +33,10 @@ if __name__ == "__main__":
     base_model = ResNet50(weights='imagenet', include_top=False, pooling='max')
 
     # 构建网络的最后一层，二分类
-    predictions = Dense(1, activation='sigmoid')(base_model.output)
+    x = base_model.output
+    x = Dense(1024, activation="relu")(x)
+    x = Dense(512, activation="relu")(x)
+    predictions = Dense(1, activation='sigmoid')(x)
 
     # 定义整个模型
     model = Model(inputs=base_model.input, outputs=predictions)

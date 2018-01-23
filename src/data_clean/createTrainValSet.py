@@ -4,11 +4,11 @@ import shutil
 import numpy as np
 
 # image source
-POSITIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/positive"
-NEGATIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/negative"
+POSITIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707TeamProject/data/ourdata/de/positive_200_de"
+NEGATIVE_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707TeamProject/data/ourdata/de/negative_200_de"
 # train and validation root
-TRAIN_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/train"
-VAL_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707data/data/val"
+TRAIN_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707TeamProject/data/ourdata/de/train"
+VAL_ROOT = "/Users/liujianwei/OneDrive - inc/CMU_2017FALL/deep_learning_10707/homework/707TeamProject/data/ourdata/de/val"
 # proportion
 TRAIN_PERCENT = 0.9
 
